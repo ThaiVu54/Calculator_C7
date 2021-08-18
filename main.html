@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="number" name="soHang1" id="box1">
+<input type="number" name="soHang2" id="box2">
+<br><br>
+<button name="1" onclick="tinhToan(this)">Addition(+)</button>
+<button name="2" onclick="tinhToan(this)">Subtraction(-)</button>
+<button name="3" onclick="tinhToan(this)">Multiplication(x)</button> <!-- this lấy phần tử trong thẻ này -->
+<button name="4" onclick="tinhToan(this)">Division(/)</button>
+
+<script>
+
+    function tinhToan(e){ //truyền element: phần tử
+        box1 = document.getElementById('box1').value;
+        box2 = document.getElementById('box2').value;
+        chonLua = e.getAttribute("name"); //truyen vao thuoc tinh name tới chonLua
+        so = parseInt(box1);
+        so2 = parseInt(box2);
+
+        switch(chonLua){
+            case "1":
+                add = so + so2;
+                alert(add);
+                break;
+            case "2":
+                sub = so - so2;
+                alert(sub);
+                break;
+            case "3":
+                mut = so * so2;
+                alert(mut);
+                break;
+            case "4":
+                divi = so/so2;
+                alert(divi);
+        }
+
+    }
+
+</script>
+</body>
+</html>
